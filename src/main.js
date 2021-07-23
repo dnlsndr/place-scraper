@@ -17,12 +17,12 @@ let boulderwelt_domains = [
 
 
 
-let level_gauge = new client.Gauge({ name: 'level', help: "boulderwelt response key", labelNames: ['domain'] });
-let flevel_gauge = new client.Gauge({ name: 'flevel', help: "boulderwelt response key", labelNames: ['domain'] });
-let isqueue_gauge = new client.Gauge({ name: 'isqueue', help: "boulderwelt response key", labelNames: ['domain'] });
-let queue_gauge = new client.Gauge({ name: 'queue', help: "boulderwelt response key", labelNames: ['domain'] });
-let percent_gauge = new client.Gauge({ name: 'percent', help: "boulderwelt response key", labelNames: ['domain'] });
-let success_gauge = new client.Gauge({ name: 'success', help: "boulderwelt response key", labelNames: ['domain'] });
+let level_gauge = new client.Gauge({ name: 'boulderwelt_level', help: "boulderwelt response key", labelNames: ['domain'] });
+let flevel_gauge = new client.Gauge({ name: 'boulderwelt_flevel', help: "boulderwelt response key", labelNames: ['domain'] });
+let isqueue_gauge = new client.Gauge({ name: 'boulderwelt_isqueue', help: "boulderwelt response key", labelNames: ['domain'] });
+let queue_gauge = new client.Gauge({ name: 'boulderwelt_queue', help: "boulderwelt response key", labelNames: ['domain'] });
+let percent_gauge = new client.Gauge({ name: 'boulderwelt_percent', help: "boulderwelt response key", labelNames: ['domain'] });
+let success_gauge = new client.Gauge({ name: 'boulderwelt_success', help: "boulderwelt response key", labelNames: ['domain'] });
 
 const timer = ms => new Promise(res => setTimeout(res, ms));
 
@@ -64,4 +64,4 @@ server.get('/metrics', async (req, res) => {
   }
 });
 
-server.listen(3000);
+server.listen(5080);
