@@ -51,7 +51,7 @@ void async function () {
       })
     }
 
-    await timer(3000)
+    await timer(15000)
   }
 }();
 
