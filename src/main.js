@@ -13,16 +13,19 @@ let boulderwelt_domains = [
   "www.boulderwelt-muenchen-ost.de",
   "www.boulderwelt-muenchen-sued.de",
   "www.boulderwelt-muenchen-west.de",
+  "www.boulderwelt-dortmund.de",
+  "www.boulderwelt-frankfurt.de",
+  "www.boulderwelt-regensburg.de",
 ]
 
 
 
-let level_gauge = new client.Gauge({ name: 'boulderwelt_level', help: "boulderwelt response key", labelNames: ['domain'] });
-let flevel_gauge = new client.Gauge({ name: 'boulderwelt_flevel', help: "boulderwelt response key", labelNames: ['domain'] });
-let isqueue_gauge = new client.Gauge({ name: 'boulderwelt_isqueue', help: "boulderwelt response key", labelNames: ['domain'] });
-let queue_gauge = new client.Gauge({ name: 'boulderwelt_queue', help: "boulderwelt response key", labelNames: ['domain'] });
-let percent_gauge = new client.Gauge({ name: 'boulderwelt_percent', help: "boulderwelt response key", labelNames: ['domain'] });
-let success_gauge = new client.Gauge({ name: 'boulderwelt_success', help: "boulderwelt response key", labelNames: ['domain'] });
+let level_gauge = new client.Gauge({ name: 'boulderwelt_level', help: "Current boulderwelt occupantion level", labelNames: ['domain'] });
+let flevel_gauge = new client.Gauge({ name: 'boulderwelt_flevel', help: "Max boulderwelt occupation level according to corona guidelines", labelNames: ['domain'] });
+let isqueue_gauge = new client.Gauge({ name: 'boulderwelt_isqueue', help: "Displays if a boulderwelt has a waiting queue at check-in", labelNames: ['domain'] });
+let queue_gauge = new client.Gauge({ name: 'boulderwelt_queue', help: "Displays the amount of people that are currently waiting at check-in", labelNames: ['domain'] });
+let percent_gauge = new client.Gauge({ name: 'boulderwelt_percent', help: "The occupation percentage value", labelNames: ['domain'] });
+let success_gauge = new client.Gauge({ name: 'boulderwelt_success', help: "Request success", labelNames: ['domain'] });
 
 const timer = ms => new Promise(res => setTimeout(res, ms));
 
