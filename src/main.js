@@ -103,7 +103,7 @@ void async function () {
       }
     }
 
-    await timer(15000)
+    await timer(60000)
   }
 }();
 
